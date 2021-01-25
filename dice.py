@@ -27,6 +27,25 @@ class dice:
         self.nonce += 1
         return round(value,2)
 
+    def getserverSeed(self):
+        return self.serverSeed
+    
+    def setserverSeed(self, serverSeed):
+        self.serverSeed = serverSeed
+    
+    def getclientSeed(self):
+        return self.clientSeed
+    
+    def setclientSeed(self, clientSeed):
+        self.clientSeed = clientSeed
+
+    def getnonce(self):
+        return self.nonce
+        
+    def setnonce(self, nonce):
+        self.nonce = nonce
+    
+
 if __name__ == '__main__':
     ROLL = dice()
     print(ROLL.roll())
